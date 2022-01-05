@@ -15,7 +15,7 @@ class DockerHostmanager < Formula
     bin.install "docker-hostmanager.phar"
   end
 
-  def service
+  service do
     keep_alive true
     run bin/"docker-hostmanager.phar"
     log_path var/"log/docker-hostmanager/stdout.log"
