@@ -12,12 +12,12 @@ class DockerHostmanager < Formula
   depends_on "chipmk/tap/docker-mac-net-connect" => :recommended
 
   def install
-    opt_bin.install "docker-hostmanager.phar"
+    bin.install "docker-hostmanager.phar"
   end
 
   def service
     keep_alive true
-    run opt_bin/"docker-hostmanager.phar"
+    run bin/"docker-hostmanager.phar"
     log_path var/"log/docker-hostmanager/stdout.log"
     error_log_path var/"log/docker-hostmanager/stderr.log"
   end
