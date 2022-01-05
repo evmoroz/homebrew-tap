@@ -17,7 +17,7 @@ class DockerHostmanager < Formula
 
   service do
     keep_alive true
-    run [ "php", bin/"docker-hostmanager.phar" ]
+    run [ HOMEBREW_PREFIX/"bin/php", bin/"docker-hostmanager.phar" ]
     log_path var/"log/docker-hostmanager/stdout.log"
     error_log_path var/"log/docker-hostmanager/stderr.log"
   end
